@@ -1,5 +1,15 @@
 {
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": [
+      "ES2023"
+    ],
+    "module": "ESNext",
+    "types": ["cypress", "node"],
+    "skipLibCheck": true
+  },
   "files": [],
+  "include": ["**/*.ts"],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }

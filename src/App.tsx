@@ -76,10 +76,10 @@ function App() {
         <Space>
           <Button type="primary" size="small">Button 1</Button>
           <StyledButton type="default" size="small">Button 2</StyledButton>
-          <InputNumber addonAfter={selectAfter} size="small" defaultValue={100} />
+          <InputNumber addonAfter={selectAfter} size="small" defaultValue={100} aria-label={'number'} />
           <HomeOutlined />
           <SettingFilled />
-          <ColorPicker value={color} onChange={e => setColor(e.toCssString())} size="small" showText />
+          <ColorPicker role={'colorpicker'} value={color} onChange={e => setColor(e.toCssString())} size="small" showText />
         </Space>
         <Space>
           <InputNumber addonAfter={selectAfter} size="small" defaultValue={100} disabled={!checked} />
@@ -89,6 +89,7 @@ function App() {
           <DatePicker
             defaultValue={dayjs().tz('America/Chicago')}
             showTime
+            aria-label={'Select date'}
             size="small"
             format="YYYY-MM-DD HH:mm"
             onChange={(value, dateString) => {
